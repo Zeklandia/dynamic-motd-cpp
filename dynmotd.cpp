@@ -19,6 +19,7 @@
 #include <sys/sysinfo.h>
 #include <linux/sysinfo.h>
 #include <linux/kernel.h>
+#include <curses.h>
 
 using namespace std;
 
@@ -149,6 +150,7 @@ int main()
         std::cout << "Done!";
         system("reset");
 
+	/*
         //Print the loaded information
         std::cout << cyan << ":=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=[ " << red_bold << "System Stats" << cyan << " ]=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:" << endl
                    << cyan << ":   " << white_bold << "Date/Time" << cyan << " = " << green_bold << datetime << endl
@@ -176,5 +178,6 @@ int main()
 
         std::cout << cyan << ":=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:[]:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:"
                    << color_default << endl << endl;
+		*/
         return 0;
 }
