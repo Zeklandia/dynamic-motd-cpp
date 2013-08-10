@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <anjuta>
-    <plugin name="Tools" mandatory="no">
+    <plugin name="Terminal" mandatory="no">
         <require group="Anjuta Plugin"
                  attribute="Location"
-                 value="anjuta-tools:ATPPlugin"/>
+                 value="anjuta-terminal:TerminalPlugin"/>
     </plugin>
     <plugin name="Git" mandatory="no">
         <require group="Anjuta Plugin"

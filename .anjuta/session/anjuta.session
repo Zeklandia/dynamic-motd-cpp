@@ -1,19 +1,21 @@
 [Anjuta]
-Maximized=1
-Geometry=1366x709+0+27
+Geometry=1364x708+0+27
 
 [File Loader]
-Files=../../dynmotd.cpp#20
+Files=../../src/main.cc#151
 
 [Document Manager]
 bookmarks=<?xml version="1.0" encoding="UTF-8"?>\n<bookmarks/>\n
 
+[Project Manager]
+Shortcut=Dynamic-MOTD-CPP//src//dynmotd_cpp
+Expand=dynmotd_cpp%%%Dynamic-MOTD-CPP%%%Dynamic-MOTD-CPP//src%%%Dynamic-MOTD-CPP//dynmotd_cppdoc
+
 [Execution]
+Program arguments=
+Program uri=../../src/dynmotd_cpp
 Run in terminal=2
 Working directories=../../../Dynamic-MOTD-CPP
-
-[Project Manager]
-Expand=Dynamic-MOTD-CPP
 
 [Debugger]
 Stop at beginning=2
