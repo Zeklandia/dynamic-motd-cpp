@@ -3,8 +3,8 @@
 
 SUBDIRS = src po
 
-dynmotd_cppdocdir = ${prefix}/doc/dynmotd_cpp
-dynmotd_cppdoc_DATA = \
+dynamic_motd_cppdocdir = ${prefix}/doc/dynamic_motd_cpp
+dynamic_motd_cppdoc_DATA = \
 	README\
 	COPYING\
 	AUTHORS\
@@ -17,7 +17,7 @@ INTLTOOL_FILES = intltool-extract.in \
 	intltool-merge.in \
 	intltool-update.in
 
-EXTRA_DIST = $(dynmotd_cppdoc_DATA) \
+EXTRA_DIST = $(dynamic_motd_cppdoc_DATA) \
 	$(INTLTOOL_FILES)
 
 DISTCLEANFILES = intltool-extract \
@@ -28,4 +28,4 @@ DISTCLEANFILES = intltool-extract \
 
 # Remove doc directory on uninstall
 uninstall-local:
-	-rm -r $(dynmotd_cppdocdir)
+	-rm -r $(dynamic_motd_cppdocdir)

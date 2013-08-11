@@ -60,10 +60,10 @@ am__make_running_with_option = \
   test $$has_opt = yes
 am__make_dryrun = (target_option=n; $(am__make_running_with_option))
 am__make_keepgoing = (target_option=k; $(am__make_running_with_option))
-pkgdatadir = $(datadir)/dynmotd_cpp
-pkgincludedir = $(includedir)/dynmotd_cpp
-pkglibdir = $(libdir)/dynmotd_cpp
-pkglibexecdir = $(libexecdir)/dynmotd_cpp
+pkgdatadir = $(datadir)/dynamic_motd_cpp
+pkgincludedir = $(includedir)/dynamic_motd_cpp
+pkglibdir = $(libdir)/dynamic_motd_cpp
+pkglibexecdir = $(libexecdir)/dynamic_motd_cpp
 am__cd = CDPATH="$${ZSH_VERSION+.}$(PATH_SEPARATOR)" && cd
 install_sh_DATA = $(install_sh) -c -m 644
 install_sh_PROGRAM = $(install_sh) -c
@@ -82,7 +82,7 @@ subdir = .
 DIST_COMMON = INSTALL NEWS README AUTHORS ChangeLog \
 	$(srcdir)/Makefile.in $(srcdir)/Makefile.am \
 	$(top_srcdir)/configure $(am__configure_deps) \
-	$(srcdir)/config.h.in COPYING config.guess config.sub depcomp \
+	$(srcdir)/config.h.in COPYING config.guess config.sub \
 	install-sh missing ltmain.sh
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
 am__aclocal_m4_deps = $(top_srcdir)/configure.ac
@@ -148,8 +148,8 @@ am__uninstall_files_from_dir = { \
     || { echo " ( cd '$$dir' && rm -f" $$files ")"; \
          $(am__cd) "$$dir" && rm -f $$files; }; \
   }
-am__installdirs = "$(DESTDIR)$(dynmotd_cppdocdir)"
-DATA = $(dynmotd_cppdoc_DATA)
+am__installdirs = "$(DESTDIR)$(dynamic_motd_cppdocdir)"
+DATA = $(dynamic_motd_cppdoc_DATA)
 RECURSIVE_CLEAN_TARGETS = mostlyclean-recursive clean-recursive	\
   distclean-recursive maintainer-clean-recursive
 am__recursive_targets = \
@@ -255,7 +255,7 @@ ECHO_T =
 EGREP = /bin/grep -E
 EXEEXT = 
 FGREP = /bin/grep -F
-GETTEXT_PACKAGE = dynmotd_cpp
+GETTEXT_PACKAGE = dynamic_motd_cpp
 GMOFILES = 
 GMSGFMT = /usr/bin/msgfmt
 GREP = /bin/grep
@@ -289,25 +289,20 @@ MKINSTALLDIRS = ./mkinstalldirs
 MSGFMT = /usr/bin/msgfmt
 MSGFMT_OPTS = -c
 MSGMERGE = /usr/bin/msgmerge
-NCURSES_CFLAGS = -I/usr/include/ncursesw  
-NCURSES_LIBS = -lform -lncurses++ -lncurses  
 NM = /usr/bin/nm -B
 NMEDIT = 
 OBJDUMP = objdump
 OBJEXT = o
 OTOOL = 
 OTOOL64 = 
-PACKAGE = dynmotd_cpp
+PACKAGE = dynamic_motd_cpp
 PACKAGE_BUGREPORT = 
-PACKAGE_NAME = dynmotd_cpp
-PACKAGE_STRING = dynmotd_cpp 0.1
-PACKAGE_TARNAME = dynmotd_cpp
+PACKAGE_NAME = dynamic_motd_cpp
+PACKAGE_STRING = dynamic_motd_cpp 0.1
+PACKAGE_TARNAME = dynamic_motd_cpp
 PACKAGE_URL = 
 PACKAGE_VERSION = 0.1
 PATH_SEPARATOR = :
-PKG_CONFIG = /usr/bin/pkg-config
-PKG_CONFIG_LIBDIR = 
-PKG_CONFIG_PATH = 
 POFILES = 
 POSUB = po
 PO_IN_DATADIR_FALSE = 
@@ -376,8 +371,8 @@ top_build_prefix =
 top_builddir = .
 top_srcdir = .
 SUBDIRS = src po
-dynmotd_cppdocdir = ${prefix}/doc/dynmotd_cpp
-dynmotd_cppdoc_DATA = \
+dynamic_motd_cppdocdir = ${prefix}/doc/dynamic_motd_cpp
+dynamic_motd_cppdoc_DATA = \
 	README\
 	COPYING\
 	AUTHORS\
@@ -389,7 +384,7 @@ INTLTOOL_FILES = intltool-extract.in \
 	intltool-merge.in \
 	intltool-update.in
 
-EXTRA_DIST = $(dynmotd_cppdoc_DATA) \
+EXTRA_DIST = $(dynamic_motd_cppdoc_DATA) \
 	$(INTLTOOL_FILES)
 
 DISTCLEANFILES = intltool-extract \
@@ -459,27 +454,27 @@ clean-libtool:
 
 distclean-libtool:
 	-rm -f libtool config.lt
-install-dynmotd_cppdocDATA: $(dynmotd_cppdoc_DATA)
+install-dynamic_motd_cppdocDATA: $(dynamic_motd_cppdoc_DATA)
 	@$(NORMAL_INSTALL)
-	@list='$(dynmotd_cppdoc_DATA)'; test -n "$(dynmotd_cppdocdir)" || list=; \
+	@list='$(dynamic_motd_cppdoc_DATA)'; test -n "$(dynamic_motd_cppdocdir)" || list=; \
 	if test -n "$$list"; then \
-	  echo " $(MKDIR_P) '$(DESTDIR)$(dynmotd_cppdocdir)'"; \
-	  $(MKDIR_P) "$(DESTDIR)$(dynmotd_cppdocdir)" || exit 1; \
+	  echo " $(MKDIR_P) '$(DESTDIR)$(dynamic_motd_cppdocdir)'"; \
+	  $(MKDIR_P) "$(DESTDIR)$(dynamic_motd_cppdocdir)" || exit 1; \
 	fi; \
 	for p in $$list; do \
 	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
 	  echo "$$d$$p"; \
 	done | $(am__base_list) | \
 	while read files; do \
-	  echo " $(INSTALL_DATA) $$files '$(DESTDIR)$(dynmotd_cppdocdir)'"; \
-	  $(INSTALL_DATA) $$files "$(DESTDIR)$(dynmotd_cppdocdir)" || exit $$?; \
+	  echo " $(INSTALL_DATA) $$files '$(DESTDIR)$(dynamic_motd_cppdocdir)'"; \
+	  $(INSTALL_DATA) $$files "$(DESTDIR)$(dynamic_motd_cppdocdir)" || exit $$?; \
 	done
 
-uninstall-dynmotd_cppdocDATA:
+uninstall-dynamic_motd_cppdocDATA:
 	@$(NORMAL_UNINSTALL)
-	@list='$(dynmotd_cppdoc_DATA)'; test -n "$(dynmotd_cppdocdir)" || list=; \
+	@list='$(dynamic_motd_cppdoc_DATA)'; test -n "$(dynamic_motd_cppdocdir)" || list=; \
 	files=`for p in $$list; do echo $$p; done | sed -e 's|^.*/||'`; \
-	dir='$(DESTDIR)$(dynmotd_cppdocdir)'; $(am__uninstall_files_from_dir)
+	dir='$(DESTDIR)$(dynamic_motd_cppdocdir)'; $(am__uninstall_files_from_dir)
 
 # This directory's subdirectories are mostly independent; you can cd
 # into them and run 'make' without going through this Makefile.
@@ -773,7 +768,7 @@ check: check-recursive
 all-am: Makefile $(DATA) config.h
 installdirs: installdirs-recursive
 installdirs-am:
-	for dir in "$(DESTDIR)$(dynmotd_cppdocdir)"; do \
+	for dir in "$(DESTDIR)$(dynamic_motd_cppdocdir)"; do \
 	  test -z "$$dir" || $(MKDIR_P) "$$dir"; \
 	done
 install: install-recursive
@@ -829,7 +824,7 @@ info: info-recursive
 
 info-am:
 
-install-data-am: install-dynmotd_cppdocDATA
+install-data-am: install-dynamic_motd_cppdocDATA
 
 install-dvi: install-dvi-recursive
 
@@ -875,7 +870,7 @@ ps: ps-recursive
 
 ps-am:
 
-uninstall-am: uninstall-dynmotd_cppdocDATA uninstall-local
+uninstall-am: uninstall-dynamic_motd_cppdocDATA uninstall-local
 
 .MAKE: $(am__recursive_targets) all install-am install-strip
 
@@ -887,7 +882,7 @@ uninstall-am: uninstall-dynmotd_cppdocDATA uninstall-local
 	distclean-hdr distclean-libtool distclean-tags distcleancheck \
 	distdir distuninstallcheck dvi dvi-am html html-am info \
 	info-am install install-am install-data install-data-am \
-	install-dvi install-dvi-am install-dynmotd_cppdocDATA \
+	install-dvi install-dvi-am install-dynamic_motd_cppdocDATA \
 	install-exec install-exec-am install-html install-html-am \
 	install-info install-info-am install-man install-pdf \
 	install-pdf-am install-ps install-ps-am install-strip \
@@ -895,12 +890,12 @@ uninstall-am: uninstall-dynmotd_cppdocDATA uninstall-local
 	maintainer-clean maintainer-clean-generic mostlyclean \
 	mostlyclean-generic mostlyclean-libtool pdf pdf-am ps ps-am \
 	tags tags-am uninstall uninstall-am \
-	uninstall-dynmotd_cppdocDATA uninstall-local
+	uninstall-dynamic_motd_cppdocDATA uninstall-local
 
 
 # Remove doc directory on uninstall
 uninstall-local:
-	-rm -r $(dynmotd_cppdocdir)
+	-rm -r $(dynamic_motd_cppdocdir)
 
 # Tell versions [3.59,3.63) of GNU make to not export all variables.
 # Otherwise a system limit (for SysV at least) may be exceeded.

@@ -17,8 +17,8 @@
 # We have the following line for use by intltoolize:
 # INTLTOOL_MAKEFILE
 
-GETTEXT_PACKAGE = dynmotd_cpp
-PACKAGE = dynmotd_cpp
+GETTEXT_PACKAGE = dynamic_motd_cpp
+PACKAGE = dynamic_motd_cpp
 VERSION = 0.1
 
 SHELL = /bin/bash

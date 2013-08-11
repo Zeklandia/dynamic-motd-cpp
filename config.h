@@ -5,7 +5,7 @@
 #define ENABLE_NLS 1
 
 /* GETTEXT package name */
-#define GETTEXT_PACKAGE "dynmotd_cpp"
+#define GETTEXT_PACKAGE "dynamic_motd_cpp"
 
 /* Define to 1 if you have the `bind_textdomain_codeset' function. */
 #define HAVE_BIND_TEXTDOMAIN_CODESET 1
@@ -57,19 +57,19 @@
 #define LT_OBJDIR ".libs/"
 
 /* Name of package */
-#define PACKAGE "dynmotd_cpp"
+#define PACKAGE "dynamic_motd_cpp"
 
 /* Define to the address where bug reports for this package should be sent. */
 #define PACKAGE_BUGREPORT ""
 
 /* Define to the full name of this package. */
-#define PACKAGE_NAME "dynmotd_cpp"
+#define PACKAGE_NAME "dynamic_motd_cpp"
 
 /* Define to the full name and version of this package. */
-#define PACKAGE_STRING "dynmotd_cpp 0.1"
+#define PACKAGE_STRING "dynamic_motd_cpp 0.1"
 
 /* Define to the one symbol short name of this package. */
-#define PACKAGE_TARNAME "dynmotd_cpp"
+#define PACKAGE_TARNAME "dynamic_motd_cpp"
 
 /* Define to the home page for this package. */
 #define PACKAGE_URL ""

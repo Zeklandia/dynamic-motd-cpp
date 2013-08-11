@@ -11,12 +11,12 @@ AM_CFLAGS =\
 	 -Wall\
 	 -g
 
-bin_PROGRAMS = dynmotd_cpp
+bin_PROGRAMS = dynamic_motd_cpp
 
-dynmotd_cpp_SOURCES = \
+dynamic_motd_cpp_SOURCES = \
 	main.cc
 
-dynmotd_cpp_LDFLAGS = 
+dynamic_motd_cpp_LDFLAGS = 
 
-dynmotd_cpp_LDADD = 
+dynamic_motd_cpp_LDADD = 
 

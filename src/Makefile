@@ -60,10 +60,10 @@ am__make_running_with_option = \
   test $$has_opt = yes
 am__make_dryrun = (target_option=n; $(am__make_running_with_option))
 am__make_keepgoing = (target_option=k; $(am__make_running_with_option))
-pkgdatadir = $(datadir)/dynmotd_cpp
-pkgincludedir = $(includedir)/dynmotd_cpp
-pkglibdir = $(libdir)/dynmotd_cpp
-pkglibexecdir = $(libexecdir)/dynmotd_cpp
+pkgdatadir = $(datadir)/dynamic_motd_cpp
+pkgincludedir = $(includedir)/dynamic_motd_cpp
+pkglibdir = $(libdir)/dynamic_motd_cpp
+pkglibexecdir = $(libexecdir)/dynamic_motd_cpp
 am__cd = CDPATH="$${ZSH_VERSION+.}$(PATH_SEPARATOR)" && cd
 install_sh_DATA = $(install_sh) -c -m 644
 install_sh_PROGRAM = $(install_sh) -c
@@ -78,7 +78,7 @@ PRE_UNINSTALL = :
 POST_UNINSTALL = :
 build_triplet = x86_64-unknown-linux-gnu
 host_triplet = x86_64-unknown-linux-gnu
-bin_PROGRAMS = dynmotd_cpp$(EXEEXT)
+bin_PROGRAMS = dynamic_motd_cpp$(EXEEXT)
 subdir = src
 DIST_COMMON = $(srcdir)/Makefile.in $(srcdir)/Makefile.am \
 	$(top_srcdir)/depcomp
@@ -92,16 +92,17 @@ CONFIG_CLEAN_FILES =
 CONFIG_CLEAN_VPATH_FILES =
 am__installdirs = "$(DESTDIR)$(bindir)"
 PROGRAMS = $(bin_PROGRAMS)
-am_dynmotd_cpp_OBJECTS = main.$(OBJEXT)
-dynmotd_cpp_OBJECTS = $(am_dynmotd_cpp_OBJECTS)
-dynmotd_cpp_DEPENDENCIES =
+am_dynamic_motd_cpp_OBJECTS = main.$(OBJEXT)
+dynamic_motd_cpp_OBJECTS = $(am_dynamic_motd_cpp_OBJECTS)
+dynamic_motd_cpp_DEPENDENCIES =
 AM_V_lt = $(am__v_lt_$(V))
 am__v_lt_ = $(am__v_lt_$(AM_DEFAULT_VERBOSITY))
 am__v_lt_0 = --silent
 am__v_lt_1 = 
-dynmotd_cpp_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) \
-	$(LIBTOOLFLAGS) --mode=link $(CXXLD) $(AM_CXXFLAGS) \
-	$(CXXFLAGS) $(dynmotd_cpp_LDFLAGS) $(LDFLAGS) -o $@
+dynamic_motd_cpp_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX \
+	$(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=link $(CXXLD) \
+	$(AM_CXXFLAGS) $(CXXFLAGS) $(dynamic_motd_cpp_LDFLAGS) \
+	$(LDFLAGS) -o $@
 AM_V_P = $(am__v_P_$(V))
 am__v_P_ = $(am__v_P_$(AM_DEFAULT_VERBOSITY))
 am__v_P_0 = false
@@ -136,8 +137,8 @@ AM_V_CXXLD = $(am__v_CXXLD_$(V))
 am__v_CXXLD_ = $(am__v_CXXLD_$(AM_DEFAULT_VERBOSITY))
 am__v_CXXLD_0 = @echo "  CXXLD   " $@;
 am__v_CXXLD_1 = 
-SOURCES = $(dynmotd_cpp_SOURCES)
-DIST_SOURCES = $(dynmotd_cpp_SOURCES)
+SOURCES = $(dynamic_motd_cpp_SOURCES)
+DIST_SOURCES = $(dynamic_motd_cpp_SOURCES)
 am__can_run_installinfo = \
   case $$AM_UPDATE_INFO_DIR in \
     n|no|NO) false;; \
@@ -196,7 +197,7 @@ ECHO_T =
 EGREP = /bin/grep -E
 EXEEXT = 
 FGREP = /bin/grep -F
-GETTEXT_PACKAGE = dynmotd_cpp
+GETTEXT_PACKAGE = dynamic_motd_cpp
 GMOFILES = 
 GMSGFMT = /usr/bin/msgfmt
 GREP = /bin/grep
@@ -230,25 +231,20 @@ MKINSTALLDIRS = ./mkinstalldirs
 MSGFMT = /usr/bin/msgfmt
 MSGFMT_OPTS = -c
 MSGMERGE = /usr/bin/msgmerge
-NCURSES_CFLAGS = -I/usr/include/ncursesw  
-NCURSES_LIBS = -lform -lncurses++ -lncurses  
 NM = /usr/bin/nm -B
 NMEDIT = 
 OBJDUMP = objdump
 OBJEXT = o
 OTOOL = 
 OTOOL64 = 
-PACKAGE = dynmotd_cpp
+PACKAGE = dynamic_motd_cpp
 PACKAGE_BUGREPORT = 
-PACKAGE_NAME = dynmotd_cpp
-PACKAGE_STRING = dynmotd_cpp 0.1
-PACKAGE_TARNAME = dynmotd_cpp
+PACKAGE_NAME = dynamic_motd_cpp
+PACKAGE_STRING = dynamic_motd_cpp 0.1
+PACKAGE_TARNAME = dynamic_motd_cpp
 PACKAGE_URL = 
 PACKAGE_VERSION = 0.1
 PATH_SEPARATOR = :
-PKG_CONFIG = /usr/bin/pkg-config
-PKG_CONFIG_LIBDIR = 
-PKG_CONFIG_PATH = 
 POFILES = 
 POSUB = po
 PO_IN_DATADIR_FALSE = 
@@ -325,11 +321,11 @@ AM_CFLAGS = \
 	 -Wall\
 	 -g
 
-dynmotd_cpp_SOURCES = \
+dynamic_motd_cpp_SOURCES = \
 	main.cc
 
-dynmotd_cpp_LDFLAGS = 
-dynmotd_cpp_LDADD = 
+dynamic_motd_cpp_LDFLAGS = 
+dynamic_motd_cpp_LDADD = 
 all: all-am
 
 .SUFFIXES:
@@ -414,9 +410,9 @@ clean-binPROGRAMS:
 	echo " rm -f" $$list; \
 	rm -f $$list
 
-dynmotd_cpp$(EXEEXT): $(dynmotd_cpp_OBJECTS) $(dynmotd_cpp_DEPENDENCIES) $(EXTRA_dynmotd_cpp_DEPENDENCIES) 
-	@rm -f dynmotd_cpp$(EXEEXT)
-	$(AM_V_CXXLD)$(dynmotd_cpp_LINK) $(dynmotd_cpp_OBJECTS) $(dynmotd_cpp_LDADD) $(LIBS)
+dynamic_motd_cpp$(EXEEXT): $(dynamic_motd_cpp_OBJECTS) $(dynamic_motd_cpp_DEPENDENCIES) $(EXTRA_dynamic_motd_cpp_DEPENDENCIES) 
+	@rm -f dynamic_motd_cpp$(EXEEXT)
+	$(AM_V_CXXLD)$(dynamic_motd_cpp_LINK) $(dynamic_motd_cpp_OBJECTS) $(dynamic_motd_cpp_LDADD) $(LIBS)
 
 mostlyclean-compile:
 	-rm -f *.$(OBJEXT)
