@@ -29,23 +29,23 @@ int main()
 	system("reset");
 
 	//Set colors
-	string color_default ("\e[0m");
-	string red ("\e[0;31m");
-	string red_bold ("\e[1;31m");
-	string green ("\e[0;32m");
-	string green_bold ("\e[1;32m");
-	string yellow ("\e[0;33m");
-	string yellow_bold ("\e[0;33m");
-	string blue ("\e[0;34m");
-	string blue_bold ("\e[0;34m");
-	string magenta ("\e[0;35m");
-	string magenta_bold ("\e[1;35m");
-	string cyan ("\e[0;36m");
-	string cyan_bold ("\e[1;36m");
-	string gray ("\e[0;37m");
-	string gray_bold ("\e[1;37m");
-	string white ("\e[0;97m");
-	string white_bold ("\e[1;97m");
+	string color_default	("\e[0;0m");
+	string red				("\e[0;31m");
+	string red_bold			("\e[1;31m");
+	string green			("\e[0;32m");
+	string green_bold		("\e[1;32m");
+	string yellow			("\e[0;33m");
+	string yellow_bold		("\e[1;33m");
+	string blue				("\e[0;34m");
+	string blue_bold		("\e[1;34m");
+	string magenta			("\e[0;35m");
+	string magenta_bold		("\e[1;35m");
+	string cyan				("\e[0;36m");
+	string cyan_bold		("\e[1;36m");
+	string gray				("\e[0;37m");
+	string gray_bold		("\e[1;37m");
+	string white			("\e[0;97m");
+	string white_bold		("\e[1;97m");
 
 	//System stats
 	struct utsname uname_info;
@@ -159,7 +159,7 @@ int main()
 
 	/*
 	//Print the loaded information
-	std::cout << cyan << ":=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=[ " << red_bold << "System Stats" << cyan << " ]=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:" << endl
+	cout << cyan << ":=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=[ " << red_bold << "System Stats" << cyan << " ]=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:" << endl
 		<< cyan << ":   " << white_bold << "Date/Time" << cyan << " = " << green_bold << datetime << endl
 		<< cyan << ":    " << white_bold << "Hostname" << cyan << " = " << green_bold << hostname << endl
 		<< cyan << ":     " << white_bold << "WLAN IP" << cyan << " = " << green_bold << wlan_ip << endl
@@ -168,19 +168,19 @@ int main()
 		<< cyan << ":      " << white_bold << "Memory" << cyan << " = " << green_bold << ram_size << " mB" << endl
 		<< cyan << ":       " << white_bold << "Stats" << cyan << " = " << green_bold << user_stats << endl;
 
-	std::cout << cyan << ":=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:[ " << red_bold << "User Stats" << cyan << " ]:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:" << endl
+	cout << cyan << ":=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:[ " << red_bold << "User Stats" << cyan << " ]:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:" << endl
 		<< cyan << ":    " << white_bold << "Username" << cyan << " = " << green_bold << username << endl
 		<< cyan << ":  " << white_bold << "Last Login" << cyan << " = " << green_bold << last_login << endl
 		<< cyan << ":	" << white_bold << "Home" << cyan << " = " << green_bold << home_path << endl
 		<< cyan << ":   " << white_bold << "Processes" << cyan << " = " << green_bold << process_count << " of " << process_limit << endl;
 
-	std::cout << cyan << ":=:=:=:=:=:=:=:=:=:=:=:=:=:[ " << red_bold << "Internet Weather Stats" << cyan << " ]:=:=:=:=:=:=:=:=:=:=:=:=:=:" << endl
+	cout << cyan << ":=:=:=:=:=:=:=:=:=:=:=:=:=:[ " << red_bold << "Internet Weather Stats" << cyan << " ]:=:=:=:=:=:=:=:=:=:=:=:=:=:" << endl
 		<< cyan << ":    " << white_bold << "Location" << cyan << " = " << green_bold << weather_location << ", " << weather_zip << endl
 		<< cyan << ":	   " << white_bold << "Temp" << cyan << " = " << green_bold << weather_temperature << endl
 		<< cyan << ":	" << white_bold << "Weather" << cyan << " = " << green_bold << weather_conditions << endl
 		<< cyan << ":	 " << white_bold << "Sky" << cyan << " = " << green_bold << weather_sky_conditions << endl;
 
-	std::cout << cyan << ":=:=:=:=:=:=:=:=:=:=:=:=:=:=[ " << red_bold << custom_header << cyan << " ]=:=:=:=:=:=:=:=:=:=:=:=:=:=:" << endl
+	cout << cyan << ":=:=:=:=:=:=:=:=:=:=:=:=:=:=[ " << red_bold << custom_header << cyan << " ]=:=:=:=:=:=:=:=:=:=:=:=:=:=:" << endl
 		<< cyan << ":    " << white_bold << custom_command << cyan << " = " << green_bold << custom_command_output << endl;
 
 	std::cout << cyan << ":=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:[]:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:"
