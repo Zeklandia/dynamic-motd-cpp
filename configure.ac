@@ -33,6 +33,10 @@ LT_INIT
 
 
 
+PKG_CHECK_MODULES(NCURSES,form
+ncurses++
+ncurses)
+
 AC_OUTPUT([
 Makefile
 src/Makefile

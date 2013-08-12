@@ -36,7 +36,7 @@ libdir = ${exec_prefix}/lib
 DATADIRNAME = share
 itlocaledir = $(prefix)/$(DATADIRNAME)/locale
 subdir = po
-install_sh = ${SHELL} /Users/Asher/Dropbox/Development/Workspace/Main/Dynamic-MOTD-CPP/install-sh
+install_sh = ${SHELL} /Users/Asher/Dropbox/Development/Workspace/Dynamic-MOTD-CPP/install-sh
 # Automake >= 1.8 provides $(MKDIR_P).
 # Until it can be supposed, use the safe fallback:
 mkdir_p = $(install_sh) -d

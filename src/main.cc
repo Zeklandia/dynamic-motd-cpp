@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <algorithm>
 #include <string.h>
 #include <stdio.h>
 #include <cstdlib>
@@ -61,6 +62,7 @@ int main()
 	time_t hex_time;
 	time (&hex_time);
 	string datetime = ctime(&hex_time);
+	datetime.erase(std::remove(datetime.begin(), datetime.end(), '\n'), datetime.end());
 
 	//Get hostname
 	char hostname[128];
@@ -97,10 +99,6 @@ int main()
 	string ram_size = "RAM";
 
 	//Get current users, jobs, login times, and locations
-	//USERSTATS=`w`
-	/*printf ("system uptime : %ld days, %ld:%02ld:%02ld" << endl <<,
-	si.uptime / day, (si.uptime % day) / hour,
-	(si.uptime % hour) / minute, si.uptime % minute);*/
 	string user_stats;
 	user_stats = system("w | awk 'NR==1' | cut -c2-");
 
@@ -187,5 +185,22 @@ int main()
 		<< color_default << endl << endl;
 		*/
 	cout << cyan << "Dynamic-MOTD-CPP" << color_default << endl;
+	cout	<< "Date/Time:	" << datetime 				<< endl
+			<< "Hostname:	" << hostname 				<< endl
+			<< "WLAN IP:	" << wlan_ip				<< endl
+			<< "LAN IP:		" << lan_ip					<< endl
+			<< "Kernel:		" << kernel_version			<< endl
+			<< "Memory:		" << ram_size				<< " MB" << endl
+			<< "Stats:		" << user_stats				<< endl;
+
+	cout	<< "Username:	" << username				<< endl
+			<< "Last Login:	" << last_login				<< endl
+			<< "Home:		" << home_path				<< endl
+			<< "Processes:	" << process_count			<< " of " << process_limit << endl;
+
+	cout 	<< "Location:	" << weather_location		<< ", " << weather_zip << endl
+			<< "Temp:		" << weather_temperature	<< endl
+			<< "Weather:	" << weather_conditions		<< endl
+			<< "Sky:		" << weather_sky_conditions	<< endl;
 	return 0;
 }
