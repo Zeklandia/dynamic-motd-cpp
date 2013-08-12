@@ -6,7 +6,6 @@
 #include <time.h>
 #include <netdb.h>
 #include <sys/param.h>
-#include <netinet/in.h>
 #include <arpa/inet.h>
 #include <fstream>
 #include <unistd.h>
@@ -31,16 +30,24 @@ int main()
 
 	//Set colors
 	string color_default ("\e[0m");
-	string white ("\e[0;37m");
-	string white_bold ("\e[1;37m");
-	string cyan ("\e[0;36m");
-	string cyan_bold ("\e[1;36m");
 	string red ("\e[0;31m");
 	string red_bold ("\e[1;31m");
 	string green ("\e[0;32m");
 	string green_bold ("\e[1;32m");
+	string yellow ("\e[0;33m");
+	string yellow_bold ("\e[0;33m");
+	string blue ("\e[0;34m");
+	string blue_bold ("\e[0;34m");
+	string magenta ("\e[0;35m");
+	string magenta_bold ("\e[1;35m");
+	string cyan ("\e[0;36m");
+	string cyan_bold ("\e[1;36m");
+	string gray ("\e[0;37m");
+	string gray_bold ("\e[1;37m");
+	string white ("\e[0;97m");
+	string white_bold ("\e[1;97m");
 
-	//System Stats
+	//System stats
 	struct utsname uname_info;
 	uname(&uname_info);
 	const long minute = 60;
@@ -179,6 +186,6 @@ int main()
 	std::cout << cyan << ":=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:[]:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:"
 		<< color_default << endl << endl;
 		*/
-	cout << "Dynamic-MOTD-CPP" << endl;
+	cout << cyan << "Dynamic-MOTD-CPP" << color_default << endl;
 	return 0;
 }
