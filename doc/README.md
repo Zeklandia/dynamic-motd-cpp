@@ -6,16 +6,16 @@ Basic information about the host computer, as soon as you log in.
 
 Script to display basic information about the computer to which you are logging in, when you log in.
 
- - [X] Date/Time
- - [X] Hostname
- - [X] WLAN IP Address
- - [X] LAN IP Address
- - [X] Kernel Version
+ - [x] Date/Time
+ - [x] Hostname
+ - [x] WLAN IP Address
+ - [x] LAN IP Address
+ - [x] Kernel Version
  - [ ] Memory size
  - [ ] Current users and their stats
  - [X] Username
  - [ ] Last login
- - [X] Home directory path
+ - [x] Home directory path
  - [ ] Number of processes out of total allowed
  - [ ] Weather
  - [ ] Reads configuration
