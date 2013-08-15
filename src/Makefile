@@ -329,7 +329,7 @@ AM_CFLAGS = \
 dynamic_motd_cpp_SOURCES = \
 	main.cc
 
-dynamic_motd_cpp_LDFLAGS = 
+dynamic_motd_cpp_LDFLAGS = -lncurses
 dynamic_motd_cpp_LDADD = 
 all: all-am
 

@@ -16,7 +16,7 @@ bin_PROGRAMS = dynamic_motd_cpp
 dynamic_motd_cpp_SOURCES = \
 	main.cc
 
-dynamic_motd_cpp_LDFLAGS = 
+dynamic_motd_cpp_LDFLAGS = -lncurses
 
 dynamic_motd_cpp_LDADD = 
 

@@ -1,18 +1,18 @@
 [Anjuta]
-Geometry=1364x708+0+27
+Maximized=1
+Geometry=1366x709+0+27
 
 [File Loader]
-Files=../../src/main.cc#102
+Files=../../src/main.cc#240
 
 [Document Manager]
 bookmarks=<?xml version="1.0" encoding="UTF-8"?>\n<bookmarks/>\n
 
 [Project Manager]
 Shortcut=Dynamic-MOTD-CPP//src//dynamic_motd_cpp
-Expand=dynamic_motd_cpp%%%Dynamic-MOTD-CPP%%%Dynamic-MOTD-CPP//src%%%Dynamic-MOTD-CPP//src//dynamic_motd_cpp
+Expand=Dynamic-MOTD-CPP%%%Dynamic-MOTD-CPP//src%%%Dynamic-MOTD-CPP//src//dynamic_motd_cpp
 
 [Execution]
-Program arguments=
 Program uri=../../src/dynamic_motd_cpp
 Run in terminal=2
 Working directories=../../../Dynamic-MOTD-CPP
