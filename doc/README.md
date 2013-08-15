@@ -18,6 +18,7 @@ Script to display basic information about the computer to which you are logging 
  - [X] Home directory path
  - [ ] Number of processes out of total allowed
  - [ ] Weather
+ - [ ] Reads configuration
 
 --------------------------------------------------------------------------------
 
