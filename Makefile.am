@@ -1,16 +1,9 @@
 ## Process this file with automake to produce Makefile.in
 ## Created by Anjuta
 
-SUBDIRS = src po
+SUBDIRS = src po doc
 
 dynamic_motd_cppdocdir = ${prefix}/doc/dynamic_motd_cpp
-dynamic_motd_cppdoc_DATA = \
-	README\
-	COPYING\
-	AUTHORS\
-	ChangeLog\
-	INSTALL\
-	NEWS
 
 
 INTLTOOL_FILES = intltool-extract.in \

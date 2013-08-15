@@ -1,5 +1,5 @@
 Dynamic-MOTD
-=======================
+************
 
 Basic information about the host computer, as soon as you log in.
 
