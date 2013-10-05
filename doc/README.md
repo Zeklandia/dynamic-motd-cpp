@@ -13,7 +13,7 @@ Script to display basic information about the computer to which you are logging 
  - [x] Kernel Version
  - [ ] Memory size
  - [ ] Current users and their stats
- - [X] Username
+ - [x] Username
  - [ ] Last login
  - [x] Home directory path
  - [ ] Number of processes out of total allowed

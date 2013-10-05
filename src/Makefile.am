@@ -4,19 +4,21 @@
 
 AM_CPPFLAGS = \
 	-DPACKAGE_LOCALE_DIR=\""$(localedir)"\" \
-	-DPACKAGE_SRC_DIR=\""$(srcdir)"\" \
+	-DPACKAGE_SRC_DIR=\""$(srcdir). \
+	$(NCURSES___CFLAGS)"\" \
 	-DPACKAGE_DATA_DIR=\""$(pkgdatadir)"\"
 
 AM_CFLAGS =\
 	 -Wall\
 	 -g
 
-bin_PROGRAMS = dynamic_motd_cpp
+bin_PROGRAMS = dynmotd_cpp
 
-dynamic_motd_cpp_SOURCES = \
+dynmotd_cpp_SOURCES = \
 	main.cc
 
-dynamic_motd_cpp_LDFLAGS = -lncurses
+dynmotd_cpp_LDFLAGS = 
 
-dynamic_motd_cpp_LDADD = 
+dynmotd_cpp_LDADD =  \
+	$(NCURSES___LIBS)
 

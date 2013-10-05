@@ -78,7 +78,7 @@ PRE_UNINSTALL = :
 POST_UNINSTALL = :
 build_triplet = @build@
 host_triplet = @host@
-bin_PROGRAMS = dynamic_motd_cpp$(EXEEXT)
+bin_PROGRAMS = dynmotd_cpp$(EXEEXT)
 subdir = src
 DIST_COMMON = $(srcdir)/Makefile.in $(srcdir)/Makefile.am \
 	$(top_srcdir)/depcomp
@@ -92,17 +92,17 @@ CONFIG_CLEAN_FILES =
 CONFIG_CLEAN_VPATH_FILES =
 am__installdirs = "$(DESTDIR)$(bindir)"
 PROGRAMS = $(bin_PROGRAMS)
-am_dynamic_motd_cpp_OBJECTS = main.$(OBJEXT)
-dynamic_motd_cpp_OBJECTS = $(am_dynamic_motd_cpp_OBJECTS)
-dynamic_motd_cpp_DEPENDENCIES =
+am_dynmotd_cpp_OBJECTS = main.$(OBJEXT)
+dynmotd_cpp_OBJECTS = $(am_dynmotd_cpp_OBJECTS)
+am__DEPENDENCIES_1 =
+dynmotd_cpp_DEPENDENCIES = $(am__DEPENDENCIES_1)
 AM_V_lt = $(am__v_lt_@AM_V@)
 am__v_lt_ = $(am__v_lt_@AM_DEFAULT_V@)
 am__v_lt_0 = --silent
 am__v_lt_1 = 
-dynamic_motd_cpp_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX \
-	$(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=link $(CXXLD) \
-	$(AM_CXXFLAGS) $(CXXFLAGS) $(dynamic_motd_cpp_LDFLAGS) \
-	$(LDFLAGS) -o $@
+dynmotd_cpp_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) \
+	$(LIBTOOLFLAGS) --mode=link $(CXXLD) $(AM_CXXFLAGS) \
+	$(CXXFLAGS) $(dynmotd_cpp_LDFLAGS) $(LDFLAGS) -o $@
 AM_V_P = $(am__v_P_@AM_V@)
 am__v_P_ = $(am__v_P_@AM_DEFAULT_V@)
 am__v_P_0 = false
@@ -137,8 +137,8 @@ AM_V_CXXLD = $(am__v_CXXLD_@AM_V@)
 am__v_CXXLD_ = $(am__v_CXXLD_@AM_DEFAULT_V@)
 am__v_CXXLD_0 = @echo "  CXXLD   " $@;
 am__v_CXXLD_1 = 
-SOURCES = $(dynamic_motd_cpp_SOURCES)
-DIST_SOURCES = $(dynamic_motd_cpp_SOURCES)
+SOURCES = $(dynmotd_cpp_SOURCES)
+DIST_SOURCES = $(dynmotd_cpp_SOURCES)
 am__can_run_installinfo = \
   case $$AM_UPDATE_INFO_DIR in \
     n|no|NO) false;; \
@@ -231,8 +231,8 @@ MKINSTALLDIRS = @MKINSTALLDIRS@
 MSGFMT = @MSGFMT@
 MSGFMT_OPTS = @MSGFMT_OPTS@
 MSGMERGE = @MSGMERGE@
-NCURSES_CFLAGS = @NCURSES_CFLAGS@
-NCURSES_LIBS = @NCURSES_LIBS@
+NCURSES___CFLAGS = @NCURSES___CFLAGS@
+NCURSES___LIBS = @NCURSES___LIBS@
 NM = @NM@
 NMEDIT = @NMEDIT@
 OBJDUMP = @OBJDUMP@
@@ -319,18 +319,21 @@ top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
 AM_CPPFLAGS = \
 	-DPACKAGE_LOCALE_DIR=\""$(localedir)"\" \
-	-DPACKAGE_SRC_DIR=\""$(srcdir)"\" \
+	-DPACKAGE_SRC_DIR=\""$(srcdir). \
+	$(NCURSES___CFLAGS)"\" \
 	-DPACKAGE_DATA_DIR=\""$(pkgdatadir)"\"
 
 AM_CFLAGS = \
 	 -Wall\
 	 -g
 
-dynamic_motd_cpp_SOURCES = \
+dynmotd_cpp_SOURCES = \
 	main.cc
 
-dynamic_motd_cpp_LDFLAGS = -lncurses
-dynamic_motd_cpp_LDADD = 
+dynmotd_cpp_LDFLAGS = 
+dynmotd_cpp_LDADD = \
+	$(NCURSES___LIBS)
+
 all: all-am
 
 .SUFFIXES:
@@ -415,9 +418,9 @@ clean-binPROGRAMS:
 	echo " rm -f" $$list; \
 	rm -f $$list
 
-dynamic_motd_cpp$(EXEEXT): $(dynamic_motd_cpp_OBJECTS) $(dynamic_motd_cpp_DEPENDENCIES) $(EXTRA_dynamic_motd_cpp_DEPENDENCIES) 
-	@rm -f dynamic_motd_cpp$(EXEEXT)
-	$(AM_V_CXXLD)$(dynamic_motd_cpp_LINK) $(dynamic_motd_cpp_OBJECTS) $(dynamic_motd_cpp_LDADD) $(LIBS)
+dynmotd_cpp$(EXEEXT): $(dynmotd_cpp_OBJECTS) $(dynmotd_cpp_DEPENDENCIES) $(EXTRA_dynmotd_cpp_DEPENDENCIES) 
+	@rm -f dynmotd_cpp$(EXEEXT)
+	$(AM_V_CXXLD)$(dynmotd_cpp_LINK) $(dynmotd_cpp_OBJECTS) $(dynmotd_cpp_LDADD) $(LIBS)
 
 mostlyclean-compile:
 	-rm -f *.$(OBJEXT)

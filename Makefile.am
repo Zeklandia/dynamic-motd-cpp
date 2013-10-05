@@ -1,16 +1,14 @@
 ## Process this file with automake to produce Makefile.in
 ## Created by Anjuta
 
-SUBDIRS = src po doc
-
-dynamic_motd_cppdocdir = ${prefix}/doc/dynamic_motd_cpp
+SUBDIRS = src po
 
 
 INTLTOOL_FILES = intltool-extract.in \
 	intltool-merge.in \
 	intltool-update.in
 
-EXTRA_DIST = $(dynamic_motd_cppdoc_DATA) \
+EXTRA_DIST = $(dynmotd_cppdoc_DATA) \
 	$(INTLTOOL_FILES)
 
 DISTCLEANFILES = intltool-extract \
@@ -21,4 +19,4 @@ DISTCLEANFILES = intltool-extract \
 
 # Remove doc directory on uninstall
 uninstall-local:
-	-rm -r $(dynamic_motd_cppdocdir)
+	-rm -r $(dynmotd_cppdocdir)

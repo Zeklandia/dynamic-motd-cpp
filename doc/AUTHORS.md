@@ -1,4 +1,4 @@
 Authors
-=======================
+=======
 
-Asher Wood (awood5659@gmail.com)
+Asher Wood  (awood5659@gmail.com)
