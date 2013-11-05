@@ -26,4 +26,4 @@ Development is currently in-progress for the C++ version.
 
 --------------------------------------------------------------------------------
 
-![alt tag](https://lh6.googleusercontent.com/-t-FB_1SNc2Q/UgpP6d0DPPI/AAAAAAAADyc/0-In7jSbK90/w991-h557-no/dynmotd.png)
+![alt tag](https://lh3.googleusercontent.com/-6_xLdxeuhsg/Unhg3_JUrDI/AAAAAAAAETY/IFYhwQjYMms/w817-h497-no/dynmotd-shell.png)
