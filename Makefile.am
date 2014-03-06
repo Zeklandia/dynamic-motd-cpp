@@ -3,6 +3,15 @@
 
 SUBDIRS = src po
 
+dynmotd_cppdocdir = ${prefix}/doc/dynmotd_cpp
+dynmotd_cppdoc_DATA = \
+	README\
+	COPYING\
+	AUTHORS\
+	ChangeLog\
+	INSTALL\
+	NEWS
+
 
 INTLTOOL_FILES = intltool-extract.in \
 	intltool-merge.in \

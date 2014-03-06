@@ -4,8 +4,7 @@
 
 AM_CPPFLAGS = \
 	-DPACKAGE_LOCALE_DIR=\""$(localedir)"\" \
-	-DPACKAGE_SRC_DIR=\""$(srcdir). \
-	$(NCURSES___CFLAGS)"\" \
+	-DPACKAGE_SRC_DIR=\""$(srcdir)"\" \
 	-DPACKAGE_DATA_DIR=\""$(pkgdatadir)"\"
 
 AM_CFLAGS =\
@@ -19,6 +18,5 @@ dynmotd_cpp_SOURCES = \
 
 dynmotd_cpp_LDFLAGS = 
 
-dynmotd_cpp_LDADD =  \
-	$(NCURSES___LIBS)
+dynmotd_cpp_LDADD = 
 
